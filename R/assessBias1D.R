@@ -1,4 +1,4 @@
-#' \code{assessBias1D_modified}
+#' \code{assessBias1D}
 #'
 #' This function compares the distribution of some variable in the sample to its distribution in the population (i.e. the whole geographic domain). If a set of weights are provided, it also compares the weighted
 #' distribution in the sample to the distribution in the population. Multiple sets of weights can be supplied, in which case the function will produce several plots datasets, each pertaining to one set. The idea 
@@ -11,7 +11,7 @@
 #' @param x String. Name of the column in pop with the variable whose distributions will be assessed. 
 #' @param weights Numeric vector or list of numeric vectors. One or more sets of weights whose lengths equal the number of rows in pop. Each weight should should correspond to the matching row of pop. Weights can be calculated using e.g. poststratification,
 #' superpopulation modelling, etc. (Boyd et al. 2023). 
-#' @param breaks Numeric. \code{assessBias1D_modified} calculates a relative frequency distribution of x in the sample and population, and breaks is the number of bins into which the distributions will be split. 
+#' @param breaks Numeric. \code{assessBias1D} calculates a relative frequency distribution of x in the sample and population, and breaks is the number of bins into which the distributions will be split. 
 #' @param RNames String or character vector. Names of sample inclusion variables R. One name per element of R. Used for plots and other outputs.
 #' #' @param RNames String or character vector. Names of sample inclusion variables R. One name per element of R. Used for plots and other outputs.
 #' @param WNames String or character vector. Name of each set of weights. One name per set (this will often be 1). Used for plots and other outputs.
@@ -20,7 +20,7 @@
 #' 
 #' @return a list with two elements: 1) a plot of the relative frequency distributions and 2) the underlying data. 
 #' 
-assessBias1D_modified <- function(pop, R, x, weights = NULL, breaks, RNames, WNames = NULL) {
+assessBias1D <- function(pop, R, x, weights = NULL, breaks, RNames, WNames = NULL) {
   
   if (!is.data.frame(pop)) stop("pop must be a data.frame")
   

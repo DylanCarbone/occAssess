@@ -1,4 +1,4 @@
-#' \code{assessSpatialCov_modified}
+#' \code{assessSpatialCov}
 #'
 #' Grids and maps species occurrence data using specified CRS.
 #'
@@ -22,7 +22,7 @@
 #'
 #' @return A list of ggplot2 maps and optionally rasters.
 #' @export
-assessSpatialCov_modified <- function(dat,
+assessSpatialCov <- function(dat,
                                       species,
                                       x,
                                       y,
