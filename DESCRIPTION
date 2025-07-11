@@ -22,7 +22,8 @@ Imports:
     raster,
     spatstat.geom,
     rasterVis,
-    reshape2
+    reshape2,
+    dplyr
 Suggests: 
     knitr,
     rmarkdown,
